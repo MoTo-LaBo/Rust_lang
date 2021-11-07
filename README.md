@@ -5,12 +5,12 @@
 - Generics・Traits・構造体・列挙型・ユーザー定義型
 - Unit test
 
-# project 作成
+### project 作成
     cargo new <project dir名>
 - cargo package manager を使用して project dir を作成できる
-# build
+### build
     cargo
-# build & 実行
+### build & 実行
     cargo run
-# code check
+### code check
     cargo check
