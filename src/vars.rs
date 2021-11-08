@@ -13,7 +13,7 @@ pub fn run() {
     // sub_a::func_a();
     // sub_b::func_b();
 
-    // mutable(可変可能) immutable(可変不可)
+    // ---------------- mutable(可変可能) immutable(可変不可) ---------------- //
     let mut x = 5;
     println!("The value of x is: {}", x);
     x = 6;
@@ -75,4 +75,42 @@ pub fn run() {
     let a1 = [1, 2, 3, 4, 5];
     let a2 = [0; 10];
     println!("{:?} {:?} {} {}", a1, a2, a1[2], a1[3]);
+
+    // ---------------- 文字列slice : String型 ---------------- //
+    // Rust は utf-8 を採用している : 1 ~ 4 byte を自動的に割り当てていく
+    let s1 = "helloこんにちは挨拶"; // 英字 = 1byte 日本語 = 3byte
+    let s2 = "hello";
+    println!("Stack address of s1 is: {:p}", &s1);
+    println!("Stack address of s2 is: {:p}", &s2);
+
+    // 最初(ptr)の 8bytes の中に格納されている stack に紐づいた address を取り出す method
+    println!("Stack memory address of s1 is: {:?}", s1.as_ptr());
+    println!("Stack memory address of s2 is: {:?}", s2.as_ptr());
+
+    // 次の(len) 8bytes
+    println!("Len of s1 is: {}", s1.len());
+    println!("Len of s2 is: {}", s2.len());
+
+    // String型 Heap 可変長に対応
+    let mut s1 = String::from("hello");
+    let mut s2 = String::from("hellojworld");
+    println!("Stack address of s1 is: {:p}", &s1);
+    println!("Stack address of s2 is: {:p}", &s2);
+
+    // 最初(ptr)の 8bytes の中に格納されている heap に紐づいた address を取り出す method
+    println!("Stack address of s1 is: {:?}", s1.as_ptr());
+    println!("Stack address of s2 is: {:?}", s2.as_ptr());
+
+    // 次の(len) 8bytes
+    println!("Len of s1 is: {}", s1.len());
+    println!("Len of s2 is: {}", s2.len());
+
+    // capacity 8bytes
+    println!("Capacity of s1 is: {}", s1.capacity());
+    println!("Capacity of s2 is: {}", s2.capacity());
+
+    // 文字列を追加して確認
+    s1.push_str("_nwe1");
+    s2.push_str("_nwe2");
+    println!("{} {}", s1, s2);
 }
