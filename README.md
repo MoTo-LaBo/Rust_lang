@@ -5,6 +5,12 @@
 - Generics・Traits・構造体・列挙型・ユーザー定義型
 - Unit test
 
+### update
+    rustup update
+### uninstall
+    rustup self uninstall
+### version
+    rustc --version
 ### project 作成
     cargo new <project dir名>
 - cargo package manager を使用して project dir を作成できる
