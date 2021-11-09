@@ -1,10 +1,12 @@
 # Rust 言語基礎
 [Rust: The Book](https://doc.rust-lang.org/book/ch01-01-installation.html)
+
+[Rust my document](https://github.com/MoTo-LaBo/rust_lang/blob/main/rust_lang.md#:~:text=Blame-,Rust%20%E8%A8%80%E8%AA%9E%E5%9F%BA%E7%A4%8E%20document,-Rust%20App%20memory)
+
 - Rustの言語仕様
 - 所有権・借用・ライフタイム
 - Generics・Traits・構造体・列挙型・ユーザー定義型
-- Unit test
-
+- Unit tet
 ### update
     rustup update
 ### uninstall
