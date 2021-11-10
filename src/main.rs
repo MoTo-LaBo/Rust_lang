@@ -7,7 +7,8 @@
 // mod enums;
 // mod traits;
 mod error_handling;
-mod unit_test;
+// mod unit_test;
+// mod debug;
 
 fn main() {
     // println!("Hello, world!");
@@ -20,6 +21,7 @@ fn main() {
     // enums::run();
     // traits::run();
     error_handling::run();
+    // debug::run();
     // vars::sub_a::func_a();
     // vars::sub_b::func_b();
 }
